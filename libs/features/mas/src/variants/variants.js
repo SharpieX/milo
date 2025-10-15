@@ -17,6 +17,7 @@ import {
 import { SimplifiedPricingExpress, SIMPLIFIED_PRICING_EXPRESS_AEM_FRAGMENT_MAPPING } from './simplified-pricing-express.js';
 import { FullPricingExpress, FULL_PRICING_EXPRESS_AEM_FRAGMENT_MAPPING } from './full-pricing-express.js';
 import { Mini, MINI_AEM_FRAGMENT_MAPPING } from './mini.js';
+import { SingleCard, SINGLE_CARD_AEM_FRAGMENT_MAPPING } from './single-card.js';
 
 // Registry for dynamic variants
 const variantRegistry = new Map();
@@ -80,6 +81,12 @@ registerVariant(
     Mini,
     MINI_AEM_FRAGMENT_MAPPING,
     Mini.variantStyle,
+);
+registerVariant(
+    'single-card',
+    SingleCard,
+    SINGLE_CARD_AEM_FRAGMENT_MAPPING,
+    SingleCard.variantStyle,
 );
 
 const getVariantLayout = (card) => {
